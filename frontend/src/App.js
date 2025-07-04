@@ -1,48 +1,4 @@
-// ...existing code...
-
-{/* SEO Headline Section */}
-<div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-2xl border-2 border-purple-200/50 mb-6">
-  {/* ...existing headline code... */}
-</div>
-
-{/* Social Metrics Section */}
-<div className="bg-gradient-to-r from-blue-100 to-cyan-100 p-6 rounded-2xl border-2 border-blue-200/50 mb-6">
-  <h3 className="text-xl font-bold text-gray-700 mb-4">Social Metrics</h3>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <div className="text-center">
-      <p className="font-semibold text-blue-700">Facebook</p>
-      <p className="text-lg">{businessData.social_metrics.facebook_followers}</p>
-    </div>
-    <div className="text-center">
-      <p className="font-semibold text-pink-700">Instagram</p>
-      <p className="text-lg">{businessData.social_metrics.instagram_followers}</p>
-    </div>
-    <div className="text-center">
-      <p className="font-semibold text-sky-700">Twitter</p>
-      <p className="text-lg">{businessData.social_metrics.twitter_followers}</p>
-    </div>
-    <div className="text-center">
-      <p className="font-semibold text-green-700">Engagement Rate</p>
-      <p className="text-lg">{businessData.social_metrics.engagement_rate}%</p>
-    </div>
-  </div>
-</div>
-
-{/* Competitor Insights Section */}
-<div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-6 rounded-2xl border-2 border-yellow-200/50 mb-6">
-  <h3 className="text-xl font-bold text-gray-700 mb-4">Competitor Insights</h3>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {businessData.competitor_insights.map((comp, idx) => (
-      <div key={idx} className="p-4 bg-white rounded-xl shadow border">
-        <p className="font-semibold text-gray-800 mb-2">{comp.competitor_name}</p>
-        <p className="text-sm text-gray-600">Rating Difference: <span className="font-bold">{comp.rating_difference}</span></p>
-        <p className="text-sm text-gray-600">Review Difference: <span className="font-bold">{comp.review_difference}</span></p>
-      </div>
-    ))}
-  </div>
-</div>
-
-// ...existing code...import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import { BusinessProvider, useBusinessContext } from "./context/BusinessContext";
